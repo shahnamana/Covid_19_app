@@ -1,13 +1,13 @@
 import 'package:bloc/bloc.dart';
 import '../pages/homepage.dart';
-import '../pages/myaccountspage.dart';
+import '../pages/hotspotlocator.dart';
 import '../pages/myorderspage.dart';
 
 import '../pages/homepage.dart';
 
 enum NavigationEvents {
   HomePageClickedEvent,
-  MyAccountClickedEvent,
+  HotspotLocatorClickedEvent,
   MyOrdersClickedEvent,
 }
 
@@ -23,8 +23,8 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
       case NavigationEvents.HomePageClickedEvent:
         yield HomePage();
         break;
-      case NavigationEvents.MyAccountClickedEvent:
-        yield MyAccountsPage();
+      case NavigationEvents.HotspotLocatorClickedEvent:
+        yield HotspotLocator();
         break;
       case NavigationEvents.MyOrdersClickedEvent:
         yield MyOrdersPage();
