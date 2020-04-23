@@ -128,6 +128,10 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                       MenuItem(
                         icon: Icons.card_giftcard,
                         title: "Preventive Measures",
+                        onTap:(){
+                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.PreventiveMeasuresClickedEvent);
+                        }
+
                       ),
                       Divider(
                         height: 64,

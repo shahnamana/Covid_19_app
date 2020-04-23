@@ -1,10 +1,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sidebar_animation/bloc.navigation_bloc/navigation_bloc.dart';
 import 'package:sidebar_animation/widgets/my_header.dart';
 
-import 'constant.dart';
+import '../constant.dart';
 
+class PreventiveMeasures extends StatelessWidget with NavigationStates{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new InfoScreen();
+  }
+}
 class InfoScreen extends StatefulWidget {
   @override
   _InfoScreenState createState() => _InfoScreenState();
