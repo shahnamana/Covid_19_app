@@ -24,7 +24,7 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
         yield HomePage();
         break;
       case NavigationEvents.HotspotLocatorClickedEvent:
-        yield PreventiveMeasures();
+        yield HotspotLocator();
         break;
       case NavigationEvents.MyOrdersClickedEvent:
         yield MyOrdersPage();
