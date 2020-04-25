@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       isExpanded: true,
                       underline: SizedBox(),
                       icon: SvgPicture.asset("assets/icon/dropdown.png"),
-                      value: "Indonesia",
+                      value: null,
                       items: [
                         'Indonesia',
                         'Bangladesh',
