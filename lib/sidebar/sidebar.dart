@@ -114,7 +114,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                         title: "Hotspot Locator",
                         onTap: () {
                           onIconPressed();
-                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HotspotLocatorClickedEvent);
+                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HotspotClickedEvent);
                         },
                       ),
                       MenuItem(

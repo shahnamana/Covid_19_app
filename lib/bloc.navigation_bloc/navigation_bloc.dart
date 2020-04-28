@@ -6,7 +6,7 @@ import '../pages/preventivemeasures.dart';
 
 enum NavigationEvents {
   HomePageClickedEvent,
-  HotspotLocatorClickedEvent,
+  HotspotClickedEvent,
   MyOrdersClickedEvent,
   PreventiveMeasuresClickedEvent,
 }
@@ -23,7 +23,7 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
       case NavigationEvents.HomePageClickedEvent:
         yield HomePage();
         break;
-      case NavigationEvents.HotspotLocatorClickedEvent:
+      case NavigationEvents.HotspotClickedEvent:
         yield HotspotLocator();
         break;
       case NavigationEvents.MyOrdersClickedEvent:
