@@ -18,30 +18,29 @@ class CountryPanel extends StatelessWidget{
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 2),
         children: <Widget>[
           StatusPanel(
-            title: 'Maharashtara',
+            title: 'CONFIRMED',
             panelColor:Colors.red[100],
             textColor: Colors.red,
-            count:countryData['states_daily'][0]['mh'].toString(),
+            count:countryData['statewise'][0]['confirmed'].toString(),
           ),
-          StatusPanel(
-            title: 'ACTIVE',
-            panelColor:Colors.blue[100],
-            textColor: Colors.blue,
-            count:countryData['states_daily'][0]['kl'].toString(),
-          ),
-          StatusPanel(
-            title: 'RECOVERED',
-            panelColor:Colors.green[100],
-            textColor: Colors.green,
-            count:'34',
-          ),
-          StatusPanel(
-            title: 'DEATHS',
-            panelColor:Colors.grey[100],
-            textColor: Colors.grey,
-            count:'1234',
-          ),
-
+            StatusPanel(
+              title: 'ACTIVE',
+              panelColor:Colors.blue[100],
+              textColor: Colors.blue,
+              count:countryData['statewise'][0]['active'].toString(),
+            ),
+            StatusPanel(
+              title: 'RECOVERED',
+              panelColor:Colors.green[100],
+              textColor: Colors.green,
+              count:countryData['statewise'][0]['recovered'].toString(),
+            ),
+            StatusPanel(
+              title: 'DEATHS',
+              panelColor:Colors.grey[100],
+              textColor: Colors.grey,
+              count:countryData['statewise'][0]['deaths'].toString(),
+            ),
         ],
       ),
     );
@@ -57,14 +56,12 @@ class StatusPanel extends StatelessWidget{
 
   const StatusPanel({Key key, this.panelColor, this.textColor, this.title, this.count}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     double width = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(10),
       height: 80,
       width: width / 2,
       color: panelColor,

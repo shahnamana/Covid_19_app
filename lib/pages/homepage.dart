@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   double offset = 0;
   Map countryData;
   fetchCountryData()async{
-    http.Response response = await http.get('https://api.covid19india.org/states_daily.json');
+    http.Response response = await http.get('https://api.covid19india.org/data.json');
     setState(() {
       countryData = json.decode(response.body);
     });
@@ -45,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     // TODO: implement dispose
     controller.dispose();
+//    fetchCountryData.dispose();
     super.dispose();
   }
 
@@ -67,56 +68,14 @@ class _HomeScreenState extends State<HomeScreen> {
               textBottom: "is stay at home.",
               offset: offset,
             ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(
-                  color: Color(0xFFE5E5E5),
-                ),
-              ),
-              child: Row(
-                children: <Widget>[
-                  SvgPicture.asset("assets/icons/maps-and-flags.svg"),
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: DropdownButton(
-                      isExpanded: true,
-                      underline: SizedBox(),
-                      icon: SvgPicture.asset("assets/icons/dropdown.svg"),
-                      value: "Indonesia",
-                      items: [
-                        'Indonesia',
-                        'Bangladesh',
-                        'United States',
-                        'Japan'
-                      ].map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (value) {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
             SingleChildScrollView(
+              padding: new EdgeInsets.all(20.0),
               child:
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    height: 100,
-                  ),
-                  Padding(padding: const EdgeInsets.symmetric(vertical:10),
-                    child:Text('Country wide Stats', style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                  Padding(padding: const EdgeInsets.symmetric(vertical:0),
+                    child: Center(child:Text('Current Stats for India', style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),)),
                   ),
                   countryData==null?CircularProgressIndicator():CountryPanel(countryData: countryData,),
                 ],
