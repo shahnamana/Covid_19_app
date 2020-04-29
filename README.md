@@ -3,3 +3,6 @@
 
 A Sidebar is created and the Pages are successfully created
 have to change the page content
+
+
+The app is still in building process and not finalize yet.
