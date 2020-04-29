@@ -129,9 +129,9 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                         icon: Icons.card_giftcard,
                         title: "Preventive Measures",
                         onTap:(){
+                          onIconPressed();
                           BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.PreventiveMeasuresClickedEvent);
                         }
-
                       ),
                       Divider(
                         height: 64,
