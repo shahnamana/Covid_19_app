@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class CountryPanel extends StatelessWidget{
-
   final Map countryData;
-
   const CountryPanel({Key key, this.countryData}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
       child: GridView(
+
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 2),
@@ -62,7 +60,7 @@ class StatusPanel extends StatelessWidget{
     double width = MediaQuery.of(context).size.width;
     return Container(
       margin: EdgeInsets.all(10),
-      height: 80,
+      height: 50,
       width: width / 2,
       color: panelColor,
       child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sidebar_animation/pages/homepage.dart';
 
 import 'sidebar/sidebar_layout.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white
       ),
       home: SideBarLayout(),
+//    home: HomePage(),
     );
   }
 }

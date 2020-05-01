@@ -26,7 +26,7 @@ class _MyHeaderState extends State<MyHeader> {
       clipper: MyClipper(),
       child: Container(
         padding: EdgeInsets.only(left: 40, top: 50, right: 20),
-        height: 350,
+        height: 300,
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -55,7 +55,8 @@ class _MyHeaderState extends State<MyHeader> {
                   ),
                 );
               },
-              child: SvgPicture.asset("assets/icons/menu.svg"),
+              child: Container(height: 20,),
+              //SvgPicture.asset("assets/icons/menu.svg"),
             ),
             SizedBox(height: 20),
             Expanded(
@@ -95,9 +96,9 @@ class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var path = Path();
-    path.lineTo(0, size.height - 80);
+    path.lineTo(0, size.height - 50);
     path.quadraticBezierTo(
-        size.width / 2, size.height, size.width, size.height - 80);
+        size.width / 2, size.height, size.width, size.height - 50);
     path.lineTo(size.width, 0);
     path.close();
     return path;
