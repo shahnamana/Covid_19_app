@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'package:sidebar_animation/models/place.dart';
 import 'dart:convert' as convert;
 
-class PlacesService{
+class PlacesServiceMedical{
   final key = 'AIzaSyDaWKha7GYrpLwyEIKzk85vIWhF0Fhx3Js';
 
   Future<List<Place>> getPlaces(double lat, double lng) async {
@@ -11,7 +11,5 @@ class PlacesService{
     var jsonResults = json['results'] as List;
     return jsonResults.map((place) => Place.fromJson(place)).toList();
   }
-
-
 
 }
