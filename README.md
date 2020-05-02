@@ -10,8 +10,8 @@
  <p><p>
  Here are some of the screenshot of the app:
  <p>
- <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144902.jpg">
- <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144909.jpg">
+ <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144902.jpg" style="width:500px;height:600px">
+ <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144909.jpg" style="width:500px;height:600px">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144930.jpg">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144940.jpg">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144945.jpg">
