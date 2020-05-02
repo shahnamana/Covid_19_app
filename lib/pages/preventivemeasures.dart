@@ -78,7 +78,7 @@ class _InfoScreenState extends State<InfoScreen> {
                         ),
                         SymptomCard(
                           image: "assets/images/caugh.png",
-                          title: "Caugh",
+                          title: "Cough",
                         ),
                         SymptomCard(
                           image: "assets/images/fever.png",
