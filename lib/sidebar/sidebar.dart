@@ -5,6 +5,8 @@ import 'package:rxdart/rxdart.dart';
 
 import '../bloc.navigation_bloc/navigation_bloc.dart';
 import '../sidebar/menu_item.dart';
+import 'package:flutter_emoji/flutter_emoji.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideBar extends StatefulWidget {
   @override
@@ -17,6 +19,8 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
   Stream<bool> isSidebarOpenedStream;
   StreamSink<bool> isSidebarOpenedSink;
   final _animationDuration = const Duration(milliseconds: 50);
+//  var heart  = Emoji('heart', '❤');
+  var parser = EmojiParser();
 
   @override
   void initState() {
@@ -73,25 +77,15 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                       SizedBox(
                         height: 100,
                       ),
-                      ListTile(
-                        title: Text(
-                          "Welcome to our app",
-                          style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w800),
-                        ),
-                        subtitle: Text(
-                          "Thank You for using our service",
-                          style: TextStyle(
-                            color: Color(0xFF1BB5FD),
-                            fontSize: 12,
+                      Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          image : DecorationImage(
+                            image: AssetImage("assets/images/corona_virus.png"),
                           ),
                         ),
-                        leading: CircleAvatar(
-                          child: Icon(
-                            Icons.perm_identity,
-                            color: Colors.white,
-                          ),
-                          radius: 40,
-                        ),
+
                       ),
                       Divider(
                         height: 64,
@@ -108,14 +102,14 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                           BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickedEvent);
                         },
                       ),
-                      MenuItem(
-                        icon: Icons.person,
-                        title: "Hotspot Locator",
-                        onTap: () {
-                          onIconPressed();
-                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HotspotClickedEvent);
-                        },
-                      ),
+//                      MenuItem(
+//                        icon: Icons.person,
+//                        title: "Hotspot Locator",
+//                        onTap: () {
+//                          onIconPressed();
+//                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HotspotClickedEvent);
+//                        },
+//                      ),
                       MenuItem(
                         icon: Icons.shopping_basket,
                         title: "Essential Stores",
@@ -139,13 +133,21 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                         indent: 32,
                         endIndent: 32,
                       ),
-                      MenuItem(
-                        icon: Icons.settings,
-                        title: "Settings",
-                      ),
-                      MenuItem(
-                        icon: Icons.exit_to_app,
-                        title: "Logout",
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            child: Text(parser.emojify('Made with :heart: by'), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),),
+                          ),
+                          SizedBox(height: 10,),
+                          GestureDetector(
+                            child:Container(
+                              child: Text("Naman Shah", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
+                            ),
+                            onTap: (){
+                              _launchMapsUrl();
+                            } ,
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -179,6 +181,16 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
         );
       },
     );
+  }
+
+  void _launchMapsUrl() async {
+    final url = 'https://www.linkedin.com/in/naman-shah-95493378/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    }
+    else {
+      throw 'Could not Launch Url';
+    }
   }
 }
 

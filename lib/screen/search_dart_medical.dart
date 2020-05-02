@@ -27,22 +27,7 @@ class Search extends StatelessWidget{
             return (places != null)?Column(
               children: <Widget>[
 //                SizedBox(height: 20,),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient: LinearGradient(
-                        begin: Alignment.topRight,
-                        end: Alignment.bottomLeft,
-                        colors: [
-                          Color(0xFF3383CD),
-                          Color(0xFF11249F),
-                        ]
-                    ),
-                  ),
-                  child: Center(child:Text("Medical Shop Near By", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),),
-                ),
+
                 Container(
                   height: MediaQuery.of(context).size.height / 3,
                   width: MediaQuery.of(context).size.width,
