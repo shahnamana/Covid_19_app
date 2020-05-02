@@ -102,14 +102,6 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                           BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickedEvent);
                         },
                       ),
-//                      MenuItem(
-//                        icon: Icons.person,
-//                        title: "Hotspot Locator",
-//                        onTap: () {
-//                          onIconPressed();
-//                          BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HotspotClickedEvent);
-//                        },
-//                      ),
                       MenuItem(
                         icon: Icons.shopping_basket,
                         title: "Essential Stores",
