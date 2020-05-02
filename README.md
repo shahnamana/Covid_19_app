@@ -6,6 +6,8 @@
  The app uses Flutter and Dart to build the native app layout.
  <p>The number of COVID-19 patients data is fetched from the API from <a href="https://www.covid19india.org/">"https://www.covid19india.org/"</a>
  <p>The app also uses Google Maps API to locate the essential stores like Medical/Pharmacy and Grocery near the user Location and displays the rating of the store.
+  
+  <p><p> Any one who want to use the code are free to use but please add your own Google Maps API with features like Maps SDK for IOS and ANdroid, Places API enabled and added to its relevant places which states "YOUR_KEY" in the files.
  
  <p><p>
  Here are some of the screenshot of the app:
