@@ -22,4 +22,4 @@
 <p>
  <p>
   <p>
-   Hope you gys like this. For feedback or any quereies connect with me on LinkedIn <a href="https://www.linkedin.com/in/naman-shah-95493378/"> By Clicking Here</a>
+   Hope you guys like this. For feedback or any quereies connect with me on LinkedIn <a href="https://www.linkedin.com/in/naman-shah-95493378/"> By Clicking Here</a>
