@@ -73,7 +73,8 @@ class SearchGrocery extends StatelessWidget{
                                     SizedBox(height: 5.0,),
                                     Consumer<double>(
                                       builder: (context, meters, widget){
-                                        return (meters !=null)?Text('${places[index].vicinity} \u00b7 ${(meters/1000).round()} Km'):Container();
+//                                        return (meters !=null)?Text('${places[index].vicinity} \u00b7 ${places[index].openingHours} \u00b7  ${(meters/1000).round()} Km'):Container();
+                                          return placeDetails(context, places[index], meters);
                                       },
                                     ),
                                   ],
@@ -100,6 +101,18 @@ class SearchGrocery extends StatelessWidget{
       ),
     );
   }
+
+  Widget placeDetails( BuildContext context, Place placeIndex, double meters){
+    return Column(
+      children: <Widget>[
+        (placeIndex.openingHours == 'true')?
+            Text('OPEN NOW', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.green),):
+            Text("CLOSED", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.red ),),
+        (meters !=null)?Text('${placeIndex.vicinity} \u00b7 ${(meters/1000).round()} Km'):Container()
+      ],
+    );
+  }
+
   void _launchMapsUrl(double lat, double lng) async{
     final url = 'https://www.google.com/maps/search/?api=1&query=$lat,$lng';
     if (await canLaunch(url)){
