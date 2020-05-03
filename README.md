@@ -14,7 +14,7 @@
  <p>
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144902.jpg" width="280" height="380">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144909.jpg" width="280" height="380">
- <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144930.jpg" width="280" height="380">
+ <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200503-193648(updated%20store%20page).jpg" width="280" height="380">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144940.jpg" width="280" height="380">
  <img src="https://github.com/shahnamana/Covid_19_app/blob/master/Screenshot/Screenshot_20200502-144945.jpg" width="280" height="380">
  </p>
